@@ -1,10 +1,28 @@
 package io.github.xadrezsuico.system.common;
 
-public class Tournament {
+import java.util.HashMap;
+import java.util.Map;
+
+import io.github.xadrezsuico.system.common.interfaces.PlayerInterface;
+
+public class Tournament implements PlayerInterface {
+	private int id;
 	private String name;
 	private String level;
+	private Map<Integer, Player> players;
 	
 	
+	public Tournament(){
+		players = new HashMap<Integer,Player>();
+	}
+
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -19,4 +37,27 @@ public class Tournament {
 	}
 	
 	
+	
+	public void addPlayer(Player player) {
+		if(!players.containsKey(player.getId())){
+			players.put(player.getId(), player);
+		}
+	}
+	public void editPlayer(Player player) {
+		if(players.containsKey(player.getId())){
+			players.remove(player.getId());
+			players.put(player.getId(), player);
+		}
+	}
+	public Player getPlayer(int id) {
+		if(players.containsKey(id)){
+			return players.get(id);
+		}
+		return null;
+	}
+	public void removePlayer(int id) {
+		if(players.containsKey(id)){
+			players.remove(id);
+		}
+	}
 }
