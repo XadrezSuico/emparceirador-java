@@ -2,6 +2,8 @@ package io.github.xadrezsuico.system.common;
 
 import java.util.Date;
 
+import io.github.xadrezsuico.system.common.enums.Sex;
+
 public class Person {
 	private int id;
 	private String firstname;
@@ -9,6 +11,7 @@ public class Person {
 	private Date birthday;
 	private String registryNumber;
 	private String city;
+	private Sex sex;
 	
 	
 	public int getId() {
@@ -46,6 +49,12 @@ public class Person {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	public Sex getSex() {
+		return sex;
+	}
+	public void setSex(Sex sex) {
+		this.sex = sex;
 	}
 	
 	
