@@ -13,6 +13,20 @@ public class Player extends Person {
 	private Boolean active;
 	private int lateEntry;
 	private int withdraw;
+	private double bonus;
+	public double getBonus() {
+		return bonus;
+	}
+	public void setBonus(double bonus) {
+		this.bonus = bonus;
+	}
+	public int[] getByes() {
+		return byes;
+	}
+	public void setByes(int[] byes) {
+		this.byes = byes;
+	}
+	private int[] byes;
 	
 		
 	public int getLateEntry() {
