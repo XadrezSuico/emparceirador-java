@@ -11,8 +11,22 @@ public class Player extends Person {
 	private String club;
 	private String title;
 	private Boolean active;
+	private int lateEntry;
+	private int withdraw;
 	
 		
+	public int getLateEntry() {
+		return lateEntry;
+	}
+	public void setLateEntry(int lateEntry) {
+		this.lateEntry = lateEntry;
+	}
+	public int getWithdraw() {
+		return withdraw;
+	}
+	public void setWithdraw(int withdraw) {
+		this.withdraw = withdraw;
+	}
 	public int getLocalRa() {
 		return localRa;
 	}
