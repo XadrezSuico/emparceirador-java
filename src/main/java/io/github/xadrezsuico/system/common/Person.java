@@ -2,10 +2,14 @@ package io.github.xadrezsuico.system.common;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
 import io.github.xadrezsuico.system.common.enums.Sex;
 
-public class Person {
-	private int id;
+@Entity
+public class Person extends io.github.xadrezsuico.system.model.Entity{
+	
+	private Integer id;
 	private String firstname;
 	private String lastname;
 	private Date birthday;
@@ -13,13 +17,19 @@ public class Person {
 	private String city;
 	private Sex sex;
 	
+	public Person() {
+	}
 	
-	public int getId() {
+	@Override
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	
+	@Override
+	public void setId(Integer id) {
 		this.id = id;
 	}
+	
 	public String getFirstname() {
 		return firstname;
 	}
@@ -56,6 +66,5 @@ public class Person {
 	public void setSex(Sex sex) {
 		this.sex = sex;
 	}
-	
 	
 }

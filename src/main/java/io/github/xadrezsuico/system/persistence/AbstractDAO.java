@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 
 import io.github.xadrezsuico.system.model.Entity;
 
-public abstract class AbstractDAO <T extends Entity> implements Abstract<T>{
+public abstract class AbstractDAO<T extends Entity> implements Abstract<T>{
 
 	private EntityManager entityManager;
 	
