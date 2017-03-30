@@ -6,7 +6,13 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import io.github.xadrezsuico.system.model.Entity;
-
+/**
+ * Classe abstract implementando design pattern DAO
+ * 
+ * @author jhoestevam
+ *
+ * @param <T>
+ */
 public abstract class AbstractDAO<T extends Entity> implements Abstract<T>{
 
 	private EntityManager entityManager;
