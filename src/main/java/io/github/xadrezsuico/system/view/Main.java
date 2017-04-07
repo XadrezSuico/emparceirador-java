@@ -89,15 +89,16 @@ public class Main extends JFrame {
 		gbc_btnAbrirTorneio.gridy = 0;
 		panel.add(btnAbrirTorneio, gbc_btnAbrirTorneio);
 		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		GridBagConstraints gbc_tabbedPane = new GridBagConstraints();
-		gbc_tabbedPane.gridheight = 6;
-		gbc_tabbedPane.insets = new Insets(0, 0, 5, 0);
-		gbc_tabbedPane.fill = GridBagConstraints.BOTH;
-		gbc_tabbedPane.gridx = 0;
-		gbc_tabbedPane.gridy = 1;
-		contentPane.add(tabbedPane, gbc_tabbedPane
+		JDesktopPane desktopPane = new JDesktopPane();
+		desktopPane.setBackground(Color.LIGHT_GRAY);
+		GridBagConstraints gbc_desktopPane = new GridBagConstraints();
+		gbc_desktopPane.gridheight = 6;
+		gbc_desktopPane.insets = new Insets(0, 0, 5, 0);
+		gbc_desktopPane.fill = GridBagConstraints.BOTH;
+		gbc_desktopPane.gridx = 0;
+		gbc_desktopPane.gridy = 1;
 		contentPane.add(desktopPane, gbc_desktopPane);
+		
 		
 		JTextPane textPane = new JTextPane();
 		GridBagConstraints gbc_textPane = new GridBagConstraints();
