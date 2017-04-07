@@ -20,6 +20,7 @@ import javax.swing.JDesktopPane;
 import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JTabbedPane;
+import javax.swing.JMenuItem;
 
 public class Main extends JFrame {
 
@@ -52,6 +53,12 @@ public class Main extends JFrame {
 		menuBar.setForeground(new Color(0, 0, 0));
 		menuBar.setBackground(Color.WHITE);
 		setJMenuBar(menuBar);
+		
+		JMenu mnArquivo = new JMenu("Arquivo");
+		menuBar.add(mnArquivo);
+		
+		JMenuItem mntmTeste = new JMenuItem("Teste");
+		mnArquivo.add(mntmTeste);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -70,9 +77,9 @@ public class Main extends JFrame {
 		gbc_panel.gridy = 0;
 		contentPane.add(panel, gbc_panel);
 		GridBagLayout gbl_panel = new GridBagLayout();
-		gbl_panel.columnWidths = new int[]{0, 0, 0};
+		gbl_panel.columnWidths = new int[]{0, 0, 0, 0};
 		gbl_panel.rowHeights = new int[]{0, 0};
-		gbl_panel.columnWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_panel.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
@@ -85,6 +92,7 @@ public class Main extends JFrame {
 		
 		JButton btnAbrirTorneio = new JButton("Abrir Torneio");
 		GridBagConstraints gbc_btnAbrirTorneio = new GridBagConstraints();
+		gbc_btnAbrirTorneio.insets = new Insets(0, 0, 0, 5);
 		gbc_btnAbrirTorneio.gridx = 1;
 		gbc_btnAbrirTorneio.gridy = 0;
 		panel.add(btnAbrirTorneio, gbc_btnAbrirTorneio);
