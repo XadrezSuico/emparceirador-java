@@ -83,19 +83,19 @@ public class Main extends JFrame {
 		gbl_panel.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
-		JButton btnNovoTorneio = new JButton("Novo Torneio");
-		GridBagConstraints gbc_btnNovoTorneio = new GridBagConstraints();
-		gbc_btnNovoTorneio.insets = new Insets(0, 0, 0, 5);
-		gbc_btnNovoTorneio.gridx = 0;
-		gbc_btnNovoTorneio.gridy = 0;
-		panel.add(btnNovoTorneio, gbc_btnNovoTorneio);
+		JButton btnNovoEvento = new JButton("Novo Evento");
+		GridBagConstraints gbc_btnNovoEvento = new GridBagConstraints();
+		gbc_btnNovoEvento.insets = new Insets(0, 0, 0, 5);
+		gbc_btnNovoEvento.gridx = 0;
+		gbc_btnNovoEvento.gridy = 0;
+		panel.add(btnNovoEvento, gbc_btnNovoEvento);
 		
-		JButton btnAbrirTorneio = new JButton("Abrir Torneio");
-		GridBagConstraints gbc_btnAbrirTorneio = new GridBagConstraints();
-		gbc_btnAbrirTorneio.insets = new Insets(0, 0, 0, 5);
-		gbc_btnAbrirTorneio.gridx = 1;
-		gbc_btnAbrirTorneio.gridy = 0;
-		panel.add(btnAbrirTorneio, gbc_btnAbrirTorneio);
+		JButton btnAbrirEvento = new JButton("Abrir Evento");
+		GridBagConstraints gbc_btnAbrirEvento = new GridBagConstraints();
+		gbc_btnAbrirEvento.insets = new Insets(0, 0, 0, 5);
+		gbc_btnAbrirEvento.gridx = 1;
+		gbc_btnAbrirEvento.gridy = 0;
+		panel.add(btnAbrirEvento, gbc_btnAbrirEvento);
 		
 		JDesktopPane desktopPane = new JDesktopPane();
 		desktopPane.setBackground(Color.LIGHT_GRAY);
