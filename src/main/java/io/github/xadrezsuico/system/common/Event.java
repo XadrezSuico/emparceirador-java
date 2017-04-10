@@ -25,16 +25,16 @@ public class Event extends HibernateEntity implements TournamentInterface{
 	@Column(name = "ID", nullable = false, precision = 0, scale = -126)
 	private int id;
 	
-	@Column(name = "NOME")
+	@Column(name = "NAME")
 	private String name;
 	
-	@Column(name = "DATA_INICIO")
+	@Column(name = "DATA_START")
 	private Date dateInit;
 	
-	@Column(name = "DATA_TERMINO")
+	@Column(name = "DATA_END")
 	private Date dateEnd;
 	
-	@Column(name = "TORNEIO")
+	@Column(name = "TOURNAMENTS")
 	private Map<Integer, Tournament> tournaments;
 	
 	public Event(){
