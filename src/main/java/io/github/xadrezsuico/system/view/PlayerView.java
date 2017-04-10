@@ -22,7 +22,7 @@ import io.github.xadrezsuico.system.common.enums.Sex;
 import io.github.xadrezsuico.system.common.enums.Title;
 import javax.swing.JButton;
 
-public class CadPlayer extends JFrame {
+public class PlayerView extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -47,7 +47,7 @@ public class CadPlayer extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CadReferee frame = new CadReferee();
+					RefereeView frame = new RefereeView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -59,7 +59,7 @@ public class CadPlayer extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CadPlayer() {
+	public PlayerView() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 478, 403);

@@ -20,7 +20,7 @@ import java.awt.Color;
 import javax.swing.DefaultComboBoxModel;
 import io.github.xadrezsuico.system.common.enums.Sex;
 
-public class CadReferee extends JFrame {
+public class RefereeView extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -39,7 +39,7 @@ public class CadReferee extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CadReferee frame = new CadReferee();
+					RefereeView frame = new RefereeView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,7 +51,7 @@ public class CadReferee extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CadReferee() {
+	public RefereeView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
