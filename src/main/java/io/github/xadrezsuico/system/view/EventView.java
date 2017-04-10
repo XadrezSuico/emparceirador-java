@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import java.awt.Insets;
 import javax.swing.JButton;
 
-public class CadEvento extends JFrame {
+public class EventView extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -27,7 +27,7 @@ public class CadEvento extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CadEvento frame = new CadEvento();
+					EventView frame = new EventView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class CadEvento extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CadEvento() {
+	public EventView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 388, 169);
 		contentPane = new JPanel();
