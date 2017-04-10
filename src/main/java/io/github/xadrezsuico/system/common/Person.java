@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import io.github.xadrezsuico.system.common.enums.Sex;
 
 @Entity
-public class Person extends io.github.xadrezsuico.system.model.Entity{
+public class Person extends io.github.xadrezsuico.system.model.HibernateEntity{
 	
 	private Integer id;
 	private String firstname;

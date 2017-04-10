@@ -4,13 +4,37 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.github.xadrezsuico.system.common.interfaces.TournamentInterface;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
-public class Event implements TournamentInterface{
+import io.github.xadrezsuico.system.common.interfaces.TournamentInterface;
+import io.github.xadrezsuico.system.model.HibernateEntity;
+
+@Entity
+@Table(name = "EVENT")
+public class Event extends HibernateEntity implements TournamentInterface{
+	
+	@Id
+	@SequenceGenerator(name = "ID_EVENT", sequenceName = "GEN_ID_EVENT", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_EVENT")
+	@Column(name = "ID", nullable = false, precision = 0, scale = -126)
+	private int id;
+	
+	@Column(name = "NOME")
 	private String name;
+	
+	@Column(name = "DATA_INICIO")
 	private Date dateInit;
+	
+	@Column(name = "DATA_TERMINO")
 	private Date dateEnd;
 	
+	@Column(name = "TORNEIO")
 	private Map<Integer, Tournament> tournaments;
 	
 	public Event(){
@@ -64,5 +88,15 @@ public class Event implements TournamentInterface{
 		if(tournaments.containsKey(id)){
 			tournaments.remove(id);
 		}
+	}
+
+	@Override
+	public Integer getId() {
+		return id;
+	}
+
+	@Override
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }
