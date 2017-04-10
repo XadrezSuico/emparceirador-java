@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import io.github.xadrezsuico.system.model.Entity;
+import io.github.xadrezsuico.system.model.HibernateEntity;
 /**
  * Classe abstract implementando design pattern DAO
  * 
@@ -13,7 +13,7 @@ import io.github.xadrezsuico.system.model.Entity;
  *
  * @param <T>
  */
-public abstract class AbstractDAO<T extends Entity> implements Abstract<T>{
+public abstract class AbstractDAO<T extends HibernateEntity> implements Abstract<T>{
 
 	private EntityManager entityManager;
 	

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * 
  * @author jhoestevam
  */
-public abstract class Entity implements Serializable{
+public abstract class HibernateEntity implements Serializable{
 
 	/**
 	 * 
