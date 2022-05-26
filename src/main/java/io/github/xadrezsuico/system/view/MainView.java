@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import io.github.xadrezsuico.system.common.listeners.event.NewEventListener;
+import io.github.xadrezsuico.system.controller.EventController;
 import io.github.xadrezsuico.system.view.panel.ButtonEventoPanel;
 
 import javax.swing.JProgressBar;
@@ -31,12 +33,14 @@ import java.awt.Font;
 public class MainView extends JFrame {
 
 	private JPanel contentPane;
+	
+	private EventController eventController;
 
 	/**
 	 * Create the frame.
 	 */
 	public MainView() {
-		setTitle("Xadrez Su\u00ED\u00E7o BETA");
+		setTitle("XadrezSu\u00ED\u00E7o BETA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);
 		
@@ -88,5 +92,14 @@ public class MainView extends JFrame {
 		contentPane.add(statusBar, gbc_statusBar);
 		
 
+		this.eventController = EventController.getInstance();
+		
+		this.eventController.addNewEventListener(new NewEventListener() {
+			
+			@Override
+			public void newEventListener() {
+				setTitle("HAHAHAHA");
+			}
+		});
 	}
 }
